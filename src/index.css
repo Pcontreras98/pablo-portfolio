@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply scroll-smooth antialiased overflow-x-hidden;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-snap-type: y proximity;
+    }
+
+    section[id] {
+      scroll-snap-align: start;
+    }
+  }
+  body {
+    @apply m-0 min-h-svh overflow-x-hidden bg-black text-slate-300;
+  }
+  #root {
+    @apply min-h-svh;
+  }
+}
+
+@keyframes typing-caret-blink {
+  0%,
+  49% {
+    opacity: 1;
+  }
+  50%,
+  100% {
+    opacity: 0;
+  }
+}
+
+.hero-type-animation::after {
+  content: '|' !important;
+  color: #c0c0c0 !important;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', monospace !important;
+  font-weight: 200 !important;
+  line-height: 1 !important;
+  margin-left: 0.125rem !important;
+  text-shadow: none !important;
+  animation: typing-caret-blink 1.06s step-end infinite !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-type-animation::after {
+    animation: none !important;
+    opacity: 1 !important;
+  }
+}
+
+@keyframes hero-content-enter {
+  from {
+    opacity: 0;
+    transform: translateY(1.25rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-content-enter {
+  animation: hero-content-enter 0.85s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-content-enter {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.hero-about-bridge-image {
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.92) 0%,
+    rgba(0, 0, 0, 0.55) 42%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.92) 0%,
+    rgba(0, 0, 0, 0.55) 42%,
+    transparent 100%
+  );
+}
