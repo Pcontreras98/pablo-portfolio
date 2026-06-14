@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/react"
 import { useSmoothAnchorScroll } from './hooks/useSmoothAnchorScroll'
 import { DocumentHead } from './components/DocumentHead'
 import { Navbar } from './components/Navbar'
@@ -7,6 +8,7 @@ import { About } from './components/About'
 import { Projects } from './components/Projects'
 import { Technologies } from './components/Technologies'
 import { Contact } from './components/Contact'
+
 
 export default function App() {
   useSmoothAnchorScroll()
@@ -31,6 +33,7 @@ export default function App() {
           <Contact />
         </main>
         <Footer />
+        <Analytics />
       </div>
     </div>
   )
