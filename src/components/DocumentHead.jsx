@@ -1,5 +1,5 @@
 import { useEffect } from 'react'
-import { SITE_SEO, SITE_URL, absoluteUrl } from '../config/seo'
+import { PERSON_DISPLAY_NAME, SITE_SEO, SITE_URL, absoluteUrl } from '../config/seo'
 
 function setMeta(attr, key, content) {
   if (!content) return
@@ -59,6 +59,7 @@ export function DocumentHead() {
       '@context': 'https://schema.org',
       '@type': 'Person',
       name: SITE_SEO.author,
+      alternateName: PERSON_DISPLAY_NAME,
       url: SITE_URL,
       image: ogImage,
       jobTitle: 'Frontend Developer',

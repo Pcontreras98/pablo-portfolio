@@ -2,6 +2,7 @@ import { Container } from './Container'
 import { AboutHeroFade } from './HeroBackground'
 import cardBg from '../assets/card-bg.jpg'
 import avatar from '../assets/pablo-photo.jpg'
+import { PERSON_FULL_NAME } from '../config/seo'
 import { SOCIAL_LINKS } from '../data/social'
 import { TECHNOLOGIES } from '../data/technologies'
 import { SocialIcon } from './SocialIcon'
@@ -106,6 +107,7 @@ export function About() {
                 <h3 className="mt-6 text-center text-[1.625rem] font-bold tracking-tight text-white sm:mt-5 sm:text-2xl">
                   Pablo Contreras
                 </h3>
+                <p className="mt-1 text-center text-sm text-zinc-500">{PERSON_FULL_NAME}</p>
                 <p className="mt-2 text-center text-lg font-medium text-brand sm:mt-1.5 sm:text-[0.9375rem]">
                   Frontend Developer <span className="text-brand/70">•</span> Peru
                 </p>
