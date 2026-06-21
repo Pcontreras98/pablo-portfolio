@@ -6,7 +6,7 @@ export const PERSON_DISPLAY_NAME = 'Pablo Contreras'
 
 export const SITE_SEO = {
   title: `${PERSON_FULL_NAME} | Frontend Developer`,
-  description: `Portfolio of ${PERSON_FULL_NAME}, a frontend developer from Peru. I build clean, responsive, and accessible web experiences with React, JavaScript, and modern CSS.`,
+  description: `Portfolio of ${PERSON_FULL_NAME}, a frontend developer from Peru. I build clean, responsive, and accessible web experiences with React, TypeScript, JavaScript, and modern CSS.`,
   keywords: [
     PERSON_FULL_NAME,
     PERSON_DISPLAY_NAME,
@@ -25,7 +25,7 @@ export const SITE_SEO = {
   ogImage: '/og-image.jpg',
   ogImageWidth: 1200,
   ogImageHeight: 630,
-  ogImageAlt: `${PERSON_FULL_NAME} — Frontend Developer portfolio`,
+  ogImageAlt: `${PERSON_DISPLAY_NAME} — Frontend Developer. React, TypeScript, JavaScript portfolio banner.`,
   twitterCard: 'summary_large_image',
   email: 'pablomartincontrerasnino@gmail.com',
   github: 'https://github.com/Pcontreras98',
